@@ -1,0 +1,10 @@
+D:\dev\Work\VitalCMD\VitalCMD\bin\VitalCMD.dll
+D:\dev\Work\VitalCMD\VitalCMD\bin\VitalCMD.pdb
+D:\dev\Work\VitalCMD\VitalCMD\bin\Mono.Data.Sqlite.dll
+D:\dev\Work\VitalCMD\VitalCMD\bin\MySql.Data.dll
+D:\dev\Work\VitalCMD\VitalCMD\bin\Newtonsoft.Json.dll
+D:\dev\Work\VitalCMD\VitalCMD\bin\TerrariaServer.exe
+D:\dev\Work\VitalCMD\VitalCMD\bin\TShockAPI.dll
+D:\dev\Work\VitalCMD\VitalCMD\obj\Debug\VitalCMD.csprojResolveAssemblyReference.cache
+D:\dev\Work\VitalCMD\VitalCMD\obj\Debug\VitalCMD.dll
+D:\dev\Work\VitalCMD\VitalCMD\obj\Debug\VitalCMD.pdb

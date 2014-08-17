@@ -1,0 +1,2 @@
+D:\dev\Work\Essentials-Signcommands\bin\Essentials+.dll
+D:\dev\Work\Essentials-Signcommands\Essentials\obj\Release\Essentials+.dll
