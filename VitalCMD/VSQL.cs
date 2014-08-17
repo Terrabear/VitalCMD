@@ -1,23 +1,23 @@
-﻿using System.Collections.Generic;
+﻿using Mono.Data.Sqlite;
+using MySql.Data.MySqlClient;
+using System.Collections.Generic;
 using System.Data;
 using System.IO;
-using Mono.Data.Sqlite;
-using MySql.Data.MySqlClient;
 using TShockAPI;
 using TShockAPI.DB;
 
-namespace Essentials
+namespace VitalCMD
 {
-	public class EsSql
+	public class VSQL
 	{
 		private static IDbConnection _db;
 
 		#region Setup Database
 		public static void SetupDb()
 		{
-            if (File.Exists(Path.Combine(TShock.SavePath, "ES&SC", "Essentials.db")) && !File.Exists(Path.Combine(TShock.SavePath, "ES&SC", "Essentials.sqlite")))
+            if (File.Exists(Path.Combine(TShock.SavePath, "VC", "VitalCMD.db")) && !File.Exists(Path.Combine(TShock.SavePath, "VC", "VitalCMD.sqlite")))
 			{
-                File.Move(Path.Combine(TShock.SavePath, "ES&SC", "Essentials.db"), Path.Combine(TShock.SavePath, "ES&SC", "Essentials.sqlite"));
+                File.Move(Path.Combine(TShock.SavePath, "VC", "VitalCMD.db"), Path.Combine(TShock.SavePath, "VC", "VitalCMD.sqlite"));
 			}
 			switch (TShock.Config.StorageType.ToLower())
 			{
@@ -34,7 +34,7 @@ namespace Essentials
 					};
 					break;
 				case "sqlite":
-					var sql = Path.Combine(TShock.SavePath, "ES&SC", "Essentials.sqlite");
+					var sql = Path.Combine(TShock.SavePath, "VC", "VitalCMD.sqlite");
 					_db = new SqliteConnection(string.Format("uri=file://{0},Version=3", sql));
 					break;
 			}

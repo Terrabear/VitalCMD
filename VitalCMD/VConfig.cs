@@ -1,10 +1,10 @@
-﻿using System.IO;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System.Collections.Generic;
+using System.IO;
 
-namespace Essentials
+namespace VitalCMD
 {
-	public class EsConfig
+	public class VConfig
 	{
 		public bool ShowBackMessageOnDeath = true;
 		public string PrefixNicknamesWith = "~";
@@ -28,11 +28,11 @@ namespace Essentials
             File.WriteAllText(path, JsonConvert.SerializeObject(this, Formatting.Indented));
         }
 
-        public static EsConfig Read(string path)
+        public static VConfig Read(string path)
         {
             return !File.Exists(path)
-                ? new EsConfig() 
-                : JsonConvert.DeserializeObject<EsConfig>(File.ReadAllText(path));
+                ? new VConfig()
+                : JsonConvert.DeserializeObject<VConfig>(File.ReadAllText(path));
         }
 	}
 }
