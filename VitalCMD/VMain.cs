@@ -14,9 +14,9 @@ namespace Essentials
 	[ApiVersion(1, 16)]
 	public class Essentials : TerrariaPlugin
 	{
-		public override string Name { get { return "Essentials"; } }
+		public override string Name { get { return "VitalCMD"; } }
 		public override string Author { get { return "Scavenger"; } }
-		public override string Description { get { return "Some Essential commands for TShock!"; } }
+		public override string Description { get { return "Some vital commands for TShock!"; } }
 		public override Version Version { get { return new Version(1, 6, 0); } }
         public static EsConfig config = new EsConfig();
 
@@ -115,12 +115,12 @@ namespace Essentials
 			Commands.ChatCommands.Add(new Command("essentials.whois", CmdWhoIs, "whois"));
 			#endregion
 
-			_savePath = Path.Combine(TShock.SavePath, "ES&SC");
+			_savePath = Path.Combine(TShock.SavePath, "VC");
 			if (!Directory.Exists(_savePath))
 				Directory.CreateDirectory(_savePath);
 
             EsSql.SetupDb();
-            var configPath = Path.Combine(_savePath, "ES_Config.json");
+            var configPath = Path.Combine(_savePath, "VConfig.json");
             (_config = EsConfig.Read(configPath)).Write(configPath);
 		}
 
@@ -1061,13 +1061,13 @@ namespace Essentials
 		
         private void ESReload(CommandArgs args)
         {
-            var savePath = Path.Combine(TShock.SavePath, "ES&SC");
+            var savePath = Path.Combine(TShock.SavePath, "VC");
             if (!Directory.Exists(savePath))
                 Directory.CreateDirectory(savePath);
-            var configPath = Path.Combine(savePath, "ES_Config.json");
+            var configPath = Path.Combine(savePath, "Vconfig.json");
             (config = EsConfig.Read(configPath)).Write(configPath);
 
-            args.Player.SendSuccessMessage("[ES] Config Reloaded");
+            args.Player.SendSuccessMessage("[VC] Config Reloaded");
         }
 		
 		#endregion
